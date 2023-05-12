@@ -1,3 +1,4 @@
 ng serve -o -> uygulamayı çalıştırır ve -o open komutu da uygulamayı chrome vb de açar
 angular two way data binding sağlıyor
 alt gr + ü tilde ~ işaretini veriyor
+ng server --hmr -> koddaki değişiklikleri sayfayı yenilemeden uyguluyor kaydedince

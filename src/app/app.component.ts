@@ -7,24 +7,7 @@ import { products } from './product';
 })
 export class AppComponent {
   products = products;
-  basket = [
-    {
-      id : 3,
-      name : 'Sek Süt 1L',
-      photoPath : 'assets/images/sut.jpg',
-      price : 8.2,
-      unit : 'Adet',
-      quantity : 5
-    },
-    {
-      id : 4,
-      name : 'Pastavilla Burgu Makarna 500G',
-      photoPath : 'assets/images/makarna.jfif',
-      price : 5.25,
-      unit : 'Adet',
-      quantity : 2
-    }
-  ];
+  basket : Product[] = [];
   
   getTotal() : string {
     let total = 0;
@@ -34,5 +17,37 @@ export class AppComponent {
 
     return total.toFixed(2) + ' TL';
   }
+
+  decreaseAmount(product : Product) : void {
+    //Ürün miktarı sıfır ise bir şey yapma
+    if(product.quantity = 0) {
+      return;
+    }
+    //Ürün miktarını azalt
+    product.quantity--;
+    //Ürün miktarı sıfır olursa sepetten çıkar
+    if(product.quantity == 0){
+      let index = this.basket.indexOf(product)
+      this.basket.splice(index, 1);
+    }
+  }
+
+  increaseAmount(product : Product) : void {
+    //Sepette yoksa ekle
+    if(!this.basket.includes(product)){
+      this.basket.push(product);
+    }
+    //Ürün miktarını arttır
+    product.quantity++;
+  }
 }
 
+
+type Product = {
+  id : number,
+  name : string,
+  photoPath : string,
+  price : number,
+  unit : string,
+  quantity : number
+};
