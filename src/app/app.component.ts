@@ -31,9 +31,7 @@ export class AppComponent {
 
   increaseAmount(product : Product) : void {
     //Sepette yoksa ekle
-    if(!this.basket.includes(product)){
-      this.basket.push(product);
-    }
+    this.addIfNotInBasket(product)
     //Ürün miktarını arttır
     product.quantity++;
   }
@@ -43,6 +41,21 @@ export class AppComponent {
       let index = this.basket.indexOf(product);
       this.basket.splice(index, 1);
     }
+  }
+
+  addIfNotInBasket(product : Product) : void {
+    if(!this.basket.includes(product) && product.quantity > 0){
+      this.basket.push(product);
+    }
+  }
+
+  updateBasket(product : Product) : void {
+    //Sepette yoksa ekle
+    this.addIfNotInBasket(product)
+
+    //Ürün miktarı sıfır olursa sepetten çıkar
+    this.removeIfZero(product);
+    
   }
 }
 
