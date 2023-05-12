@@ -27,7 +27,7 @@ export class AppComponent {
     product.quantity--;
     //Ürün miktarı sıfır olursa sepetten çıkar
     if(product.quantity == 0){
-      let index = this.basket.indexOf(product)
+      let index = this.basket.indexOf(product);
       this.basket.splice(index, 1);
     }
   }
