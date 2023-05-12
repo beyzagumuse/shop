@@ -20,7 +20,7 @@ export class AppComponent {
 
   decreaseAmount(product : Product) : void {
     //Ürün miktarı sıfır ise bir şey yapma
-    if(product.quantity = 0) {
+    if(product.quantity == 0) {
       return;
     }
     //Ürün miktarını azalt
