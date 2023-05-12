@@ -7,4 +7,9 @@ import { products } from './product';
 })
 export class AppComponent {
   products = products;
+  basket : BasketItem = [];
 }
+
+type BasketItem = {
+  product : {name : string},
+};
