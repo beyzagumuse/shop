@@ -26,10 +26,7 @@ export class AppComponent {
     //Ürün miktarını azalt
     product.quantity--;
     //Ürün miktarı sıfır olursa sepetten çıkar
-    if(product.quantity == 0){
-      let index = this.basket.indexOf(product);
-      this.basket.splice(index, 1);
-    }
+    this.removeIfZero(product);
   }
 
   increaseAmount(product : Product) : void {
@@ -39,6 +36,13 @@ export class AppComponent {
     }
     //Ürün miktarını arttır
     product.quantity++;
+  }
+
+  removeIfZero(product:Product) : void {
+    if(product.quantity == 0){
+      let index = this.basket.indexOf(product);
+      this.basket.splice(index, 1);
+    }
   }
 }
 
