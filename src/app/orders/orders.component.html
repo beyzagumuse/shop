@@ -4,7 +4,6 @@
         <tr>
             <th>Sıra</th>
             <th>Ürün Sayısı</th>
-            <th>Ürün Adı</th>
             <th class="text-end">Toplam Tutar</th>
         </tr>
     </thead>
@@ -12,7 +11,6 @@
         <tr *ngFor="let order of orders; let i = index;">
             <td>{{ i + 1}}</td>
             <td>{{order.count}}</td>
-            <td>{{order.name}}</td>
             <td class="text-end">{{order.cost.toFixed(2)}} TL</td>
         </tr>
     </tbody>

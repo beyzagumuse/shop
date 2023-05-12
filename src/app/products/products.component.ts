@@ -12,13 +12,13 @@ export class ProductsComponent{
   products = products;
   basket : Product[] = [];
   
-  getTotal() : string {
+  getTotal() : number {
     let total = 0;
     for(let item of this.basket){
       total += item.price * item.quantity;
     }
 
-    return total.toFixed(2) + ' TL';
+    return total;
   }
 
   decreaseAmount(product : Product) : void {
@@ -59,6 +59,13 @@ export class ProductsComponent{
     //Ürün miktarı sıfır olursa sepetten çıkar
     this.removeIfZero(product);
     
+  }
+
+  createOrder() : void {
+    let order = {
+      count : this.basket.length,
+      cost : this.getTotal
+    };
   }
 
 }

@@ -35,9 +35,11 @@
         <tfoot>
           <tr class="total">
             <td colspan="2">Toplam</td>
-            <td class="text-end">{{getTotal()}}</td>
+            <td class="text-end">{{getTotal().toFixed(2)}} TL</td>
           </tr>
         </tfoot>
       </table>
+
+      <button class="btn btn success" (click)="createOrder()">Sipariş Oluştur</button>
     </div>
   </div>
