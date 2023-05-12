@@ -2,3 +2,10 @@ ng serve -o -> uygulamayı çalıştırır ve -o open komutu da uygulamayı chro
 angular two way data binding sağlıyor
 alt gr + ü tilde ~ işaretini veriyor
 ng server --hmr -> koddaki değişiklikleri sayfayı yenilemeden uyguluyor kaydedince
+
+Routing -> routing sayfalar arasında gezinmek ve bununla ilgili mekanizmaların olduğu yapıdır.
+Klasik uygulamalarda sayfa içinde linke tıklanınca sayfa yenilenir, her defasında sayfa yenilenir, sayfa sunucuda yeniden oluşturulur ve bu durumda frontend backend ayrımı olmaz
+Modern de sayfayı yeniden yüklemek yerine ekranda gözüken kısımlar değişiyor sadece
+SPA - Single Page Application , modern framworkler ile geliştirilen uygulamalar
+
+Angular bir proje oluşturma esnasında routing eklemek istiyor musun diye sorar
