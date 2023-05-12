@@ -9,3 +9,14 @@ Modern de sayfayı yeniden yüklemek yerine ekranda gözüken kısımlar değiş
 SPA - Single Page Application , modern framworkler ile geliştirilen uygulamalar
 
 Angular bir proje oluşturma esnasında routing eklemek istiyor musun diye sorar
+
+component oluşturmak için terminali komut satırını kullanabiliriz. çalışan uygulama kapatılıt ilk, 
+sonra ng generate component -componentismi- / ng g c -componentismi -> component oluşturur
+
+app-routing modules e bu oluştutulan componentları eklersek düzgünce o componenta gitmesi butona basılınca sağlanabilir
+
+app.components.html de ki router-outlet sayesinde hangi sayfayı göreceğimiz, nereye gideceğini söyleriz
+
+routerLink direktifi ile tüm sayfayı yenilemek yerine sadece navigation bar altındaki değişecek kısım yüklenir, gidilir
+
+boş sayfa açıldığında msl localhost:4200 beni products a yönlendirsin istiyorum localhost:4200/products bunun için routing module e path : '',redirectTo:'products', pathMatch : 'full' demek gerekiyor
