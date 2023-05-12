@@ -7,12 +7,4 @@ import { products } from './product';
 })
 export class AppComponent {
   products = products;
-  product = {
-    id : 3,
-    name : 'Sek Süt 1L',
-    photoPath : 'assets/images/sut.jpg',
-    price : 8.2,
-    unit : 'Adet',
-    quantity : 0
-  }
 }
