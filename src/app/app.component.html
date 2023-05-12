@@ -31,18 +31,12 @@
             <td class="text-end">{{item.price.toFixed(2)}}</td>
           </tr>
 
-          <tr>
-            <td>Çipura</td>
-            <td>11 Adet</td>
-            <td class="text-end">154.00</td>
-          </tr>
-
         </tbody>
 
         <tfoot>
           <tr class="total">
             <td colspan="2">Toplam</td>
-            <td class="text-end">182.59 TL</td>
+            <td class="text-end">{{getTotal()}}</td>
           </tr>
         </tfoot>
       </table>

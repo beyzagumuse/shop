@@ -22,8 +22,17 @@ export class AppComponent {
       photoPath : 'assets/images/makarna.jfif',
       price : 5.25,
       unit : 'Adet',
-      quantity : 1
+      quantity : 2
     }
   ];
+  
+  getTotal() : string {
+    let total = 0;
+    for(let item of this.basket){
+      total += item.price * item.quantity;
+    }
+
+    return total.toFixed(2) + ' TL';
+  }
 }
 
