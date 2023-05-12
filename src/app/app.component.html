@@ -5,10 +5,10 @@
       <div class="product">
         <img [src]="product.photoPath" [alt]="product.name">
         <div class="product-name">{{product.name}}</div>
-        <div class="product-price">{{product.price.toFixed(2) + ' TL'}}</div>
+        <div class="product-price">{{product.price.toFixed(2)}} TL</div>
         <div class="quantity-bar d-flex justify-content-between align-items-center mt-2">
           <button class="btn btn-sm btn-danger">-</button>
-          <span>-</span>
+          <span>{{product.quantity || '-'}}</span>
           <button class="btn btn-sm btn-success">+</button>
         </div>
       </div>
